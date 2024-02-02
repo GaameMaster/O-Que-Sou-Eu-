@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Que Sou Eu?</title>
+<style>
+    body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 100px;
+    }
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    p {
+        font-size: 24px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+    input[type="text"] {
+        padding: 6px;
+        width: calc(100% - 24px); /* 24px de margem nas laterais */
+        margin-top: 20px;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <p>Sou algo que não tem fim,</p>
+    <p>Sem começo ou fim, me encontro.</p>
+    <p>Em cada momento estou presente,</p>
+    <p>Nunca me corroo, nunca me esqueço.</p>
+    <p>O que sou eu?</p>
+    <input type="text" id="resposta" placeholder="Digite sua resposta">
+    <button onclick="verificarResposta()">Verificar</button>
+    <p id="mensagem" style="display:none;"></p>
+</div>
+
+<script>
+function verificarResposta() {
+    var resposta = document.getElementById("resposta").value.trim().toLowerCase();
+    var mensagem = document.getElementById("mensagem");
+    if (resposta === "eterno") {
+        mensagem.style.display = "block";
+        mensagem.textContent = "Senhor, tenho um mau pressentimento sobre esse lugar, o alvo Alpha não foi visto desde aquele dia, muitos civis estão sendo forçados a se envolverem com o paranormal com o mesmo vindo para este lugar, por algum motivo eu sinto que não devo sair, sinto que eu tenho que resolver isso aqui. Talvez essa mensagem nunca chegue ao senhor, mas eu posso lhe afirmar, as coisas aqui estão feias, um dos membros morreu e outros estão desaparecidos, acabei me separando deles no medo, eu estou tentando montar algo aqui mas eu sinto que existe um problema aqui que vai além de um elemento só, tem duas ou três criaturas poderosas aqui, meus olhos mal enxergam uma, outra eu me escondo sempre que eu vejo.";
+    } else {
+        mensagem.style.display = "none";
+        alert("Resposta incorreta. Tente novamente.");
+    }
+}
+</script>
+</body>
+</html>
